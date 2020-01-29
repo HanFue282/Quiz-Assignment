@@ -8,7 +8,7 @@ body, html {
     height: 100%;
     width: 100%;
     margin: 0;
-    background-color: rgb(22, 22, 22);
+    background-color: whitesmoke;
 }
 
 header{
@@ -19,11 +19,11 @@ header{
 }
 
 main {
-    background-color: rgb(22, 22, 22);
+    background-color: whitesmoke;
 }
 
 .time {
-    color: white;
+    color:red;
     text-align: right;
     font-size: 20px;
 }
@@ -46,4 +46,8 @@ p {
 
 #progress {
     color: whitesmoke;
+}
+
+.right-wrong {
+    background-color: orange;
 }
