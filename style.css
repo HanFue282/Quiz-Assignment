@@ -1,0 +1,49 @@
+* {
+    box-sizing:border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: rgb(22, 22, 22);
+}
+
+header{
+    text-align: center;
+    color: rgb(112, 106, 106);
+    font-size: 36px;
+    background-color: black;
+}
+
+main {
+    background-color: rgb(22, 22, 22);
+}
+
+.time {
+    color: white;
+    text-align: right;
+    font-size: 20px;
+}
+
+.container {
+    background-color: palevioletred;
+    margin-top: 80px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+li {
+    list-style: none;
+    margin-top: 10px;
+}
+
+p {
+    color: white;
+}
+
+#progress {
+    color: whitesmoke;
+}

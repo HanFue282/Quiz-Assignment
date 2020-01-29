@@ -4,12 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>Quiz-Assignment</title>
 </head>
-<body>
-    
 
+<body>
+    <main>
+        <header>Quiz of Movie and Game Quotes</header>
+        <h1 class="time"></h1><div id="main"></div>
+            <section class = "container">
+                <p id= "question-prompt"></p>
+                <ul>
+                    <li><button type="button" class="btn btn-danger" id= "button-1"><span id= "option-1"></span></button></li>
+                    <li><button type="button" class="btn btn-danger" id= "button-2"><span id= "option-2"></span></button></li>
+                    <li><button type="button" class="btn btn-danger" id= "button-3"><span id= "option-3"></span></button></li>
+                    <li><button type="button" class="btn btn-danger" id= "button-4"><span id= "option-4"></span></button></li>
+                </ul>
+                </section>
+            <footer class= "container">
+                <p id= "progress">Question x of y</p>
+            </footer>
+        <div class= "answer-result"></div>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
