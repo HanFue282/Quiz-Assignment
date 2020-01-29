@@ -9,7 +9,3 @@ Selecting wrong answers will strike the timer down, giving less time to solve th
 At the end of the quiz, user will be given a score on the quiz.
 
 Good luck!
-
-cite for source(s):
-
-background-image: https://wallpaperplay.com/walls/full/2/e/4/218763.jpg
