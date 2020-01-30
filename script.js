@@ -127,6 +127,7 @@ function showScores() {
     element.innerHTML = gameOverHTML;
     
 }
+    //Store name function isn't quite working, will look for a solution.
     //function storeNames() {
     //var names = "<div class='names'>";
     //var nameForm = "<form id='nameInput' method='POST'>";

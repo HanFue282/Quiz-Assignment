@@ -1,5 +1,7 @@
 //Using prototype method can bring the quiz together.
 
+
+//Will have to fix menu and stop timer before quiz actually starts.
 //Quiz main start.
 //function setMain() {
 //    var startQuizHTML = "<h1><center>Welcome to the quiz!</center></h1>";
@@ -35,9 +37,16 @@ function setTime() {
     }, 1000)
 }
 
+//When time runs out
+//Button to Restart Quiz needs to be fixed, will find a solution.
 function timeout() {
     var timeOutHTML = "<h1><center>Time out</center></h1>";
-    timeOutHTML += "<h2 id='score'><center> Your scores: " + quiz.score + "</center></h2><p><center><button class='btn btn-danger'>Restart Quiz</button></center</p>";
+    timeOutHTML += "<h2 id='score'><center> Your score: " + quiz.score + "</center></h2><p><center><button class='btn btn-danger'>Restart Quiz</button></center</p>";
+    timeOutHTML += "<br><br>"
+    timeOutHTML += "<div class='names'><form id='inputName' method='POST'>";
+    timeOutHTML += "<label for='nameInput'> Enter name:  </label>";
+    timeOutHTML += "<input type= placeholder='Initials only' name='text-name' id='text-name'/>"
+    timeOutHTML += "<ul id= 'name-list></ul>"
     var element = document.getElementById("quiz");
     element.innerHTML = timeOutHTML;
 }
@@ -120,9 +129,16 @@ var questions = [
 ];
 
 //This will appear at the end of the quiz when all questions are answered.
+//Button will not work to restart the quiz, will look for a solution.
 function showScores() {
     var gameOverHTML = "<h1><center>Result</center></h1>";
-    gameOverHTML += "<h2 id='score'><center> Your scores: " + quiz.score + "</center></h2><p><center><button class='btn btn-danger'>Restart Quiz</button></center</p>";
+    gameOverHTML += "<h2 id='score'><center> Your scores: " + quiz.score + "</center></h2>";
+    gameOverHTML += "<p><center><button class='btn btn-danger'>Restart Quiz</button></center</p>";
+    gameOverHTML += "<br><br>"
+    gameOverHTML += "<div class='names'><form id='inputName' method='POST'>";
+    gameOverHTML += "<label for='nameInput'> Enter name:  </label>";
+    gameOverHTML += "<input type= placeholder='Initials only' name='text-name' id='text-name'/>"
+    gameOverHTML += "<ul id= 'name-list></ul>"
     var element = document.getElementById("quiz");
     element.innerHTML = gameOverHTML;
 }
