@@ -34,26 +34,26 @@ function setTime() {
             clearInterval(timerInterval);
             timeout();
         }
-    }, 1000)
+    }, 1000);
 }
 
-//When time runs out
+//When time runs out, this page will appear.
 //Button to Restart Quiz needs to be fixed, will find a solution.
 function timeout() {
     var timeOutHTML = "<h1><center>Time out</center></h1>";
     timeOutHTML += "<h2 id='score'><center> Your score: " + quiz.score + "</center></h2><p><center><button class='btn btn-danger'>Restart Quiz</button></center</p>";
-    timeOutHTML += "<br><br>"
+    timeOutHTML += "<br><br>";
     timeOutHTML += "<div class='names'><form id='inputName' method='POST'>";
     timeOutHTML += "<label for='nameInput'> Enter name:  </label>";
-    timeOutHTML += "<input type= placeholder='Initials only' name='text-name' id='text-name'/>"
-    timeOutHTML += "<ul id= 'name-list></ul>"
+    timeOutHTML += "<input type= placeholder='Initials only' name='text-name' id='text-name'/>";
+    timeOutHTML += "<ul id= 'name-list></ul>";
     var element = document.getElementById("quiz");
     element.innerHTML = timeOutHTML;
 }
 
 quizContent.prototype.getQuestionPrompt = function () {
     return this.questions[this.questionPromptIndex];
-}
+};
 
 //When answers are picked from user.
 //If user pick correct answer then time will go up.
@@ -69,11 +69,11 @@ quizContent.prototype.corrIncorr = function (answer) {
     }
 
     this.questionPromptIndex++;
-}
+};
 
 quizContent.prototype.quizEnded = function () {
     return this.questionPromptIndex === this.questions.length;
-}
+};
 
 //The question will show first, followed by the options of answers.
 function promptQnA(text, options, answer) {
@@ -85,7 +85,7 @@ function promptQnA(text, options, answer) {
 //Then for each question, the answer will be detected from the option.
 promptQnA.prototype.isCorrectAnswer = function (option) {
     return this.answer === option;
-}
+};
 
 //For when the quiz has ended or quiz is still being taken.
 function contentQuiz() {
@@ -99,9 +99,9 @@ function contentQuiz() {
 
         //Shows options for the question.
         var options = quiz.getQuestionPrompt().options;
-        for (let i = 0; i < options.length; i++) {
-            var element = document.getElementById("option" + i);
-            element.innerHTML = options[i];
+        for (var i = 0; i < options.length; i++) {
+            var elementHTML = document.getElementById("option" + i);
+            elementHTML.innerHTML = options[i];
             corrIncorr("button" + i, options[i]);
             
         }
@@ -116,7 +116,7 @@ function corrIncorr(id,corrIncorr) {
     button.onclick = function() {
         quiz.corrIncorr(corrIncorr);
         contentQuiz();
-    }
+    };
 }
 
 //The question, option, and answer are listed ans labeled down.
@@ -134,11 +134,11 @@ function showScores() {
     var gameOverHTML = "<h1><center>Result</center></h1>";
     gameOverHTML += "<h2 id='score'><center> Your scores: " + quiz.score + "</center></h2>";
     gameOverHTML += "<p><center><button class='btn btn-danger'>Restart Quiz</button></center</p>";
-    gameOverHTML += "<br><br>"
+    gameOverHTML += "<br><br>";
     gameOverHTML += "<div class='names'><form id='inputName' method='POST'>";
     gameOverHTML += "<label for='nameInput'> Enter name:  </label>";
-    gameOverHTML += "<input type= placeholder='Initials only' name='text-name' id='text-name'/>"
-    gameOverHTML += "<ul id= 'name-list></ul>"
+    gameOverHTML += "<input type= placeholder='Initials only' name='text-name' id='text-name'/>";
+    gameOverHTML += "<ul id= 'name-list></ul>";
     var element = document.getElementById("quiz");
     element.innerHTML = gameOverHTML;
 }
